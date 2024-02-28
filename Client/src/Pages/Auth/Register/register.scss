@@ -1,0 +1,14 @@
+.register-Main{
+  background-image: url(/assets/images/fondo.jpg);
+  min-height: calc(100vh - 56px);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.formRegister{
+  padding: 30px;
+  background-color: rgba(203, 203, 203, 0.858);
+  color: black;
+  border-radius: 10px;
+}

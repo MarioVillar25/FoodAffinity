@@ -19,16 +19,16 @@ select * from user;
 CREATE TABLE film (
 	film_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(50) NOT NULL,
-    country VARCHAR(50) NOT NULL,
+    category VARCHAR(50) NOT NULL,
     description VARCHAR(255),
     is_deleted BOOLEAN default 0,
     user_id INT unsigned NOT NULL,
     CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE recipe (
-	recipe_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    recipe_img VARCHAR(200) NOT NULL,
+CREATE TABLE picture (
+	picture_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    picture_img VARCHAR(200) NOT NULL,
     is_deleted BOOLEAN default 0,
     film_id INT unsigned NOT NULL,
     CONSTRAINT fk_film_id FOREIGN KEY (film_id) REFERENCES film(film_id) ON DELETE CASCADE ON UPDATE CASCADE
